@@ -12,6 +12,8 @@ iron = Griddle::DataStore.new('po.csv')
 # puts output
 # puts
 
-items = iron.section(20, 0, 7, 2) do |row|
+iron.section(20, 0, 7, 2) do |row|
   puts row.join "|"
 end
+
+puts iron.section()
