@@ -1,0 +1,49 @@
+[Company Name],,,PURCHASE ORDER,,,
+[Company Slogan],,,,,DATE:,2/1/2013
+,,,,,P.O. #,[123456]
+,,,,,,
+[Street Address],,,,,,
+"[City, ST  ZIP]",,,,,,
+Phone: [000-000-0000],,,,,,
+Fax: [000-000-0000],,,,,,
+,,,,,,
+VENDOR,,,SHIP TO,,,
+[Name],,,[Attn: Name],,,
+[Company Name],,,[Company Name],,,
+[Street Address],,,[Street Address],,,
+"[City, ST  ZIP]",,,"[City, ST  ZIP]",,,
+[Phone],,,[Phone],,,
+,,,,,,
+REQUISITIONER,SHIP VIA,,F.O.B.,SHIPPING TERMS,,
+,,,,,,
+,,,,,,
+ITEM #,DESCRIPTION,,,QTY,UNIT PRICE,TOTAL
+[23423423],Product XYZ,,,15,150.00,"2,250.00"
+[45645645],Product ABC,,,1,75.00,75.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,,,0.00
+,,,,[42],SUBTOTAL,"$2,325.00"
+Other Comments or Special Instructions,,,,,TAX RATE,6.875%
+,,,,,TAX,$159.84
+,,,,,S & H,$0.00
+,,,,,OTHER,$0.00
+,,,,,TOTAL,"$2,484.84"
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,Authorized by,,,Date
+,,,,,,
+"If you have any questions about this purchase order, please contact",,,,,,
+"[Name, Phone #, E-mail, Phone, Fax]",,,,,,
