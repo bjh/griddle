@@ -1,19 +1,11 @@
-require_relative 'lib/griddle/data_store.rb'
+require_relative 'lib/data_store.rb'
 
-iron = Griddle::DataStore.new('po.csv')
+iron = DataStore.new('po.csv')
 
-# puts "Vendor"
-# puts iron.section(10, 0, 1, 5)
-# puts
-# puts "Ship To"
-# output = iron.section(10, 3, 1, 5) do |what|
-#   [what[0].to_s.slice(1, what[0].size-2)]
-# end
-# puts output
-# puts
+puts "Vendor"
+puts iron.cut(11, 1, 1, 5)
+puts
+puts "Ship To"
+shipto = iron.scan("SHIP TO")
+puts iron.cut(shipto.row+1, shipto.col, 1, 5)
 
-iron.section(20, 0, 7, 2) do |row|
-  puts row.join "|"
-end
-
-puts iron.section()
