@@ -10,6 +10,7 @@ class Point < Struct.new(:row, :col)
   end
 end
 
+# NOTE: possibe overkill - I have been reading POODIR [yes that sounds like another name for lady parts]
 NullPoint = Point.new(nil, nil)
 
 class DataStore
@@ -22,7 +23,7 @@ class DataStore
     end
   end
     
-  def scan(what)
+  def find(what)
     @grid.each_with_index do |row, index|
       return Point.new(*offset_up(index, row.index(what))) if !row.index(what).nil?
     end
@@ -31,19 +32,17 @@ class DataStore
   end
     
   def cut(top, left, width, height)
-    # puts "cut(#{top}, #{left}, #{width}, #{height})"
-    top, left = offset(top, left)
-    # puts "cutting at: #{top}, #{left}"
+    top, left = offset_down(top, left)
     selection = []
       
     for row in top...(top+height)
-      rdata = []
+      row_data = []
         
       for col in left...(left+width)
-        rdata << @grid[row][col]
+        row_data << @grid[row][col]
       end
-      # puts "rdata: #{rdata}"
-      selection << rdata      
+
+      selection << row_data      
     end
       
     selection
@@ -51,7 +50,7 @@ class DataStore
   
   private 
   
-  def offset(*args)
+  def offset_down(*args)
     args.collect {|n| n - @offset}
   end
   
