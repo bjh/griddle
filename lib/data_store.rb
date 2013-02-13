@@ -16,7 +16,7 @@ module Griddle
       matches = []
 
       @grid.each_with_index do |row, index|
-        matches << DataPoint.new(*offset_up(index, row.index(what))) if !row.index(what).nil?
+        matches << Point.new(*offset_up(index, row.index(what))) if !row.index(what).nil?
       end
 
       if matches.size > 0
@@ -24,7 +24,7 @@ module Griddle
         # multiple results pops into my head
         matches.last
       else
-        NullDataPoint
+        NullPoint
       end
     end
 

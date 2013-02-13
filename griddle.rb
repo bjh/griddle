@@ -24,8 +24,19 @@ data_store.cut(21, 1, 7, 2).each do |row|
 end
 puts
 
-# search for two points and return the rectangle they make
+# search for two different points and use them to make a Rectangle
 puts "<rectangle from points>"
 tl = data_store.find("TAX RATE")
 br = data_store.find("TOTAL")
-puts data_store.cut_rectangle(Griddle::DataRectangle.create(tl, br))
+puts data_store.cut_rectangle(Griddle::Rectangle.create(tl, br))
+
+
+# try out the Point.move functionality
+# use the previous Ship To example
+puts
+puts "<Ship To with move>"
+shipto = data_store.find("SHIP TO")
+shipto.move(down:1)
+puts data_store.cut(shipto.row, shipto.col, 1, 5)
+
+
