@@ -1,1 +1,1 @@
-rvm use ruby-1.9.3-p194@griddle.com --create
+rvm use ruby-1.9.3-p392@griddle.com --create

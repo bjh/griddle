@@ -1,8 +1,8 @@
 require 'csv'
-require 'point.rb'
+require_relative 'point'
 
 module Griddle
-  class DataStore
+  class DataGrid
     def initialize(file, start_counting_at_zero=false)
       @offset = start_counting_at_zero ? 0 : 1
       @grid = []
@@ -19,9 +19,9 @@ module Griddle
         matches << Point.new(*offset_up(index, row.index(what))) if !row.index(what).nil?
       end
 
+      # only returning the last match for now until a better way to handle
+      #   multiple results pops into my head
       if matches.size > 0
-        # only returning the last match for now until a better way to handle
-        # multiple results pops into my head
         matches.last
       else
         NullPoint
@@ -36,7 +36,6 @@ module Griddle
         row_data = []
 
         for col in left...(left+width)
-          #puts ":> #{@grid[row][col]}"
           row_data << @grid[row][col]
         end
 
@@ -50,7 +49,7 @@ module Griddle
       cut(rectangle.top, rectangle.left, rectangle.width, rectangle.height)
     end
 
-    private 
+    private
 
     def offset_down(*args)
       args.collect {|n| n - @offset}

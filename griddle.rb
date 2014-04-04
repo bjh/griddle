@@ -1,7 +1,7 @@
 $: << File.expand_path(File.dirname(__FILE__) + '/lib')
-require 'data_store.rb'
+require 'griddle.rb'
 
-data_store = Griddle::DataStore.new('data/po.csv')
+data_store = Griddle::DataGrid.new('data/po.csv')
 
 # I know where the Vendor data is from looking at the Purchase Order
 puts "<Vendor>"
@@ -9,7 +9,7 @@ candy = data_store.cut(11, 1, 1, 5)
 puts candy
 puts
 
-# the Ship To data might move down a line or two 
+# the Ship To data might move down a line or two
 # so search for it's location based off of it's column header
 puts "<Ship To>"
 shipto = data_store.find("SHIP TO")
@@ -38,5 +38,3 @@ puts "<Ship To with move>"
 shipto = data_store.find("SHIP TO")
 shipto.move(down:1)
 puts data_store.cut(shipto.row, shipto.col, 1, 5)
-
-
