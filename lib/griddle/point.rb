@@ -4,6 +4,8 @@ module Griddle
   class Point < Struct.new(:row, :col)
     include Comparable
 
+    # TODO: not sure this is really necessary,
+    #  it seemed like a good idea at the time
     def <=>(point)
       [row, col] <=> [point.row, point.col]
     end
@@ -65,8 +67,8 @@ module Griddle
     end
   end
 
-  # return NullPoint instead of nil
-  NullPoint = Point.new(nil, nil)
-  # for no apparent reason
-  ZeroPoint = Point.new(0, 0)
+  # # return NullPoint instead of nil
+  # NullPoint = Point.new(nil, nil)
+  # # for no apparent reason
+  # ZeroPoint = Point.new(0, 0)
 end
