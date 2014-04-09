@@ -17,6 +17,18 @@ module Griddle
       @case_sensitive = false
     end
 
+    def to_rectangle
+      Rectangle.new(0, 0, width, height)
+    end
+
+    def width
+      grid[0].size
+    end
+
+    def height
+      grid.size
+    end
+
     # make Enumerable
     def each(&block)
       grid.each do |row|
