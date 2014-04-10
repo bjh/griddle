@@ -5,6 +5,12 @@ describe Griddle::DataGrid do
   let(:grid) { Griddle::DataGrid.from_csv('data/po.csv') }
 
   describe '#find' do
+    context 'using a regular expression' do
+      it 'uses the regexp to match against' do
+        expect(grid.find(/ship to/i)).to have(1).item
+      end
+    end
+
     context 'when a single match is found' do
       it 'returns an array with a single Point' do
         expect(grid.find('SHIP TO')).to have(1).item

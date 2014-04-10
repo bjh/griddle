@@ -29,7 +29,7 @@ module Griddle
       grid.size
     end
 
-    # make Enumerable
+    # Enumerable
     def each(&block)
       grid.each do |row|
         block.call(row)
@@ -50,21 +50,22 @@ module Griddle
       self
     end
 
-    def finder(row, index, what)
-      return false if row[index].nil?
+    def to_regex(query)
+      return query if query.is_a? Regexp
 
       if case_sensitive
-        row[index] == what
+        /#{Regexp.escape(query)}/
       else
-        row[index].downcase == what.downcase
+        /#{Regexp.escape(query)}/i
       end
     end
 
     def find(what)
+      what = to_regex(what)
       matches = []
 
       grid.each_with_index do |row, row_index|
-        row.each_index.select {|n| finder(row, n, what)}.each do |column|
+        row.each_index.select {|n| what.match(row[n])}.each do |column|
           matches << Point.new(*offset_up(row_index, column))
         end
       end
