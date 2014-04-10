@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    griddle (0.1.1)
+    grid-csv (0.1.1)
       terminal-table
 
 GEM
@@ -24,6 +24,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.5)
-  griddle!
+  grid-csv!
   rake
   rspec
