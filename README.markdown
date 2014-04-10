@@ -12,7 +12,9 @@ On To Business
 
 An example of the source material in question would be parsing Excel data that comes from a formatted template. One where the structure is more like a document than a database table.
 The template in question may look like this  
+
 ![](data/example.png)  
+
 If you exported the Excel data as CSV it may look something like [this](data/po.csv)
 
 Modus Operandi
