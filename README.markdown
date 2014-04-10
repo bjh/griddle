@@ -2,7 +2,7 @@ Griddle
 =======
 
 This gem was created to help process CSV files that are not really the usual *[row, col]* data.
-I have lost many hours of my life in the black hole known as the *windows intranet*, where corporate documents multiply at an obscene rate.
+I have lost many hours of my life in the black hole known as the *coporate intranet*, where windows documents multiply at an obscene rate.
 I came up with this idea to help someone handle this particular nastiness.
 
 This is one for my **windows brothers**, of course if it is useful to anyone else I would be delighted.
@@ -21,12 +21,12 @@ Modus Operandi
 ==============
 
 The main idea to keep in mind is that you are not processing rows and columns of data.
-You are cutting out **rectangles** or *grids* of data to further process.
+You are cutting out **rectangles** or *grids* of data to process further.
 
 Let's say you have to process a bunch of excel files that captured form data.
 The template that was used has a section for the user's contact information.
 Instead of ripping through rows and columns you can either:  
-- search for a known string and use that as the starting point of your data **rectangle**
+- search for a known string and use that as the starting point to cut out a  **rectangle**
 - cut out a rectangle from a know location, *i.e.* the contact info starts at row 4, column 3 and is 1 column wide and 4 rows high
 
 The hope is that you can access data in a more intuitive way than just doing a nested for loop and crossing your fingers.
