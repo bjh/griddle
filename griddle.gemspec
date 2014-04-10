@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'griddle/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "griddle"
+  spec.name          = "grid-csv"
   spec.version       = Griddle::VERSION
   spec.authors       = ["bjh"]
   spec.email         = ["fake@fake.com"]

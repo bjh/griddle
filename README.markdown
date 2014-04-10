@@ -1,6 +1,8 @@
 Griddle
 =======
 
+**note:** someone has the gem name **griddle** registered already so I am calling the gem **grid-csv**.
+
 This gem was created to help process CSV files that are not really the usual *[row, col]* data.
 I have lost many hours of my life in the black hole known as the *coporate intranet*, where windows documents multiply at an obscene rate.
 I came up with this idea to help someone handle this particular nastiness.
