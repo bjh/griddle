@@ -1,6 +1,10 @@
 Griddle
 =======
 
+[![Build Status](https://travis-ci.org/bjh/griddle.svg?branch=master)](https://travis-ci.org/bjh/griddle)
+[![Gem Version](https://badge.fury.io/rb/grid-csv.svg)](http://badge.fury.io/rb/grid-csv)
+[![Coverage Status](https://coveralls.io/repos/bjh/griddle/badge.png?branch=master)](https://coveralls.io/r/bjh/griddle?branch=master)
+
 **note:** someone has the gem name **griddle** registered already so I am calling the gem **grid-csv**.
 
 This gem was created to help process CSV files that are not really the usual *[row, col]* data.
